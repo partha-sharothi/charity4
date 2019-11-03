@@ -1051,10 +1051,10 @@ from . import md5hash
 
 
 def cryptobox_rendering(request):
-    boxID = 1234    # Your gourl cryptobox ID, https://gourl.io/editrecord/coin_boxes/0
+    boxID = 44521    # Your gourl cryptobox ID, https://gourl.io/editrecord/coin_boxes/0
     coin_name = 'bitcoin'
-    public_key = 'your-gourl_public-key'
-    private_key = 'your-gourl_private-key'
+    public_key = '44521AA0wNNsBitcoin77BTCPUBtdk7hmp8s3ew6pwgOMgxMq8'
+    private_key = '44521AA0wNNsBitcoin77BTCPRV1Fn9nMCnWTGrmnz6HU31Flk'
     webdev_key  = 'optional your-web-developer-key'
     amount = 0  # amount in bitcoins (Or another crybtocurrency
     period = '1 MINUTE'
@@ -1078,7 +1078,7 @@ def cryptobox_rendering(request):
 def callback(request, *args, **kwargs):
     html = ""
     if request.method == 'POST':
-        private_key = "Your-cryptobox-private-key"
+        private_key = "44521AA0wNNsBitcoin77BTCPRV1Fn9nMCnWTGrmnz6HU31Flk"
         h = hashlib.sha512(private_key.encode(encoding='utf-8'))    # The incoming 'private_key' data from Gourl is sha512 encrypted
         private_key_hash = h.hexdigest()    # Hence, you need to hash your private key too for make security check
         if (request.POST.get('confirmed') == '0' and request.POST.get('box') == 'box-number' and
