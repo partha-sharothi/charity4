@@ -1055,7 +1055,7 @@ def cryptobox_rendering(request):
     coin_name = 'bitcoin'
     public_key = '44521AA0wNNsBitcoin77BTCPUBtdk7hmp8s3ew6pwgOMgxMq8'
     private_key = '44521AA0wNNsBitcoin77BTCPRV1Fn9nMCnWTGrmnz6HU31Flk'
-    webdev_key  = 'optional your-web-developer-key'
+    webdev_key  = ''
     amount = 0  # amount in bitcoins (Or another crybtocurrency
     period = '1 MINUTE'
     amountUSD = 5
